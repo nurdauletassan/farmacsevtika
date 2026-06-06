@@ -45,7 +45,8 @@ function renderStructureGrid() {
     { href: 'syzba.html', label: 'Ақпараттық сызба', icon: '🗺️', badge: '' },
     { href: 'suraqtar.html', label: 'Сұрақтар', icon: '❓', badge: '10' },
     { href: 'test.html', label: 'Тест', icon: '✅', badge: '15' },
-    { href: 'praktika.html', label: 'Практика', icon: '🔬', badge: '6' },
+    { href: 'praktika.html', label: 'Практика', icon: '🔬', badge: '5' },
+    { href: 'refleksiya.html', label: 'Рефлексия', icon: '💭', badge: '3' },
     { href: 'zhagday.html', label: 'Жағдай', icon: '💡', badge: '4' },
     { href: 'kvest.html', label: 'Квест', icon: '🗺️', badge: '' },
     { href: 'oiyn.html', label: 'Ойындар', icon: '🎮', badge: '6' },
@@ -85,7 +86,7 @@ function bindTestOptionClicks() {
 }
 
 function initTestSubmits() {
-  setupTestSubmit('submitTest', 'testResult', 'test');
+  setupTestSubmit('submitTest', 'testResult');
 }
 
 function showSuraqtarMessage(text, type = 'success') {
@@ -138,7 +139,6 @@ function initSuraqtar() {
           ? `Жауаптар браузерде сақталды. ${empty} сұрақ бос қалды.`
           : 'Supabase қосылмаған. Барлық жауаптар браузерде сақталды.'
       );
-      if (typeof completeQuest === 'function') completeQuest('suraqtar');
       return;
     }
 
@@ -162,7 +162,6 @@ function initSuraqtar() {
         ? `✓ Сақталды! ${empty} сұрақ әлі бос.`
         : '✓ Барлық жауаптар Supabase-ке сақталды!'
     );
-    if (typeof completeQuest === 'function') completeQuest('suraqtar');
   });
 }
 
@@ -200,7 +199,7 @@ async function loadSuraqtarAnswers(name, textareas) {
   });
 }
 
-function setupTestSubmit(btnId, resultId, questId) {
+function setupTestSubmit(btnId, resultId) {
   const submitBtn = document.getElementById(btnId);
   if (!submitBtn) return;
 
@@ -241,11 +240,6 @@ function setupTestSubmit(btnId, resultId, questId) {
     const percent = Math.round((correct / questions.length) * 100);
     result.textContent = `Нәтиже: ${correct}/${questions.length} дұрыс (${percent}%)`;
     result.className = `test-result show ${percent >= 60 ? 'success' : 'error'}`;
-
-    if (typeof completeQuest === 'function') {
-      const bonus = typeof getTestBonusXp === 'function' ? getTestBonusXp(percent) : 0;
-      completeQuest(questId, bonus);
-    }
   });
 }
 
@@ -299,7 +293,6 @@ function initReflection() {
     if (!client) {
       saveReflectionLocally(name, answers, textareas);
       showReflectionMessage('Supabase қосылмаған. Жауаптар браузерде сақталды.');
-      if (typeof completeQuest === 'function') completeQuest('praktika');
       return;
     }
 
@@ -325,7 +318,6 @@ function initReflection() {
     }
 
     showReflectionMessage('✓ Жауаптарыңыз Supabase-ке сақталды!');
-    if (typeof completeQuest === 'function') completeQuest('praktika');
   });
 }
 

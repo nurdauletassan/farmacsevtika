@@ -3,41 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Басты бет — Дәрілік өсімдіктер</title>
+  <title>Басты бет — Фармакогнозия</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-index">
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <a href="index.html" class="logo">Фармакогнозия</a>
       <nav class="nav"></nav>
       <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main>
-    <section class="hero hero--game">
-      <div class="container hero__inner">
+    <section class="hero hero--game hero--greenhouse" aria-label="Теплица">
+      <div class="greenhouse__sky"></div>
+      <div class="greenhouse__roof"></div>
+      <div class="greenhouse__glass"></div>
+      <div class="greenhouse__mist"></div>
+      <div class="greenhouse__vignette"></div>
+
+      <div class="greenhouse__shelf greenhouse__shelf--left" aria-hidden="true">
+        <span>🪴</span><span>🌿</span><span>🌱</span><span>🍃</span><span>🌾</span>
+      </div>
+      <div class="greenhouse__shelf greenhouse__shelf--right" aria-hidden="true">
+        <span>🌸</span><span>🌿</span><span>🪴</span><span>🍃</span><span>🌱</span>
+      </div>
+
+      <div class="greenhouse__floor" aria-hidden="true"></div>
+
+      <div class="container hero__inner greenhouse__content">
         <div class="hero__game-content">
-          <p class="hero__label">🎮 Оқу платформасы</p>
+          <p class="hero__label hero__label--gh">🌱 Теплицаға қош келдіңіз</p>
           <h1 class="hero__title">Құрттарға және паразиттерге қарсы дәрілік өсімдіктер</h1>
-          <p class="hero__subtitle">AI көмекші Ұлбосын сені сабақ бойы жетектеп отырады. Дәріс, тест, практика, квест және ойындар арқылы үйрен!</p>
-          <a href="daris.html" class="btn btn--primary btn--game">🚀 Оқуды бастау</a>
+          <p class="hero__subtitle">Жылы, ылғалды теплицада дәрілік өсімдіктерді зертте. AI көмекші Шипобот сені сабақ бойы жетектеп отырады!</p>
+          <a href="daris.html" class="btn btn--primary btn--game btn--greenhouse">🚪 Теплицаға кіру — оқуды бастау</a>
         </div>
         <div class="hero__tutor-card">
-          <div class="tutor-card">
+          <div class="tutor-card tutor-card--gh">
             <div class="tutor-card__avatar">🌿🤖</div>
             <div class="tutor-card__bubble">
-              <strong>Ұлбосын:</strong>
-              <p>Сәлем! 11 бөлімнен тұратын оқу сапарын бастайық. Әр қадамда XP жинайсың!</p>
+              <strong>Шипобот:</strong>
+              <p>Мұнда әртүрлі дәрілік өсімдіктер өседі. 12 бөлімнен өтіп, біліміңді кеңейт!</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="structure-section">
+    <section class="structure-section structure-section--greenhouse">
       <div class="container">
         <h2 class="structure-section__title">📋 Сабақ құрылымы</h2>
         <div class="structure-grid" id="structureGrid"></div>
@@ -45,7 +60,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер — Оқу платформасы</p></div></footer>
+  <footer class="footer"><div class="container"><p>© 2026 Фармакогнозия — Оқу платформасы</p></div></footer>
   <script src="nav.js"></script>
   <script src="game.js"></script>
   <script src="script.js"></script>

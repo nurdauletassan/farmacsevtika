@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { href: 'suraqtar.html', label: 'Сұрақтар' },
   { href: 'test.html', label: 'Тест' },
   { href: 'praktika.html', label: 'Практика' },
+  { href: 'refleksiya.html', label: 'Рефлексия' },
   { href: 'zhagday.html', label: 'Жағдай' },
   { href: 'kvest.html', label: 'Квест' },
   { href: 'oiyn.html', label: 'Ойындар' },
@@ -14,7 +15,7 @@ const NAV_ITEMS = [
 
 const PAGE_FLOW = [
   'index.html', 'daris.html', 'tirek.html', 'syzba.html', 'suraqtar.html',
-  'test.html', 'praktika.html', 'zhagday.html', 'kvest.html', 'oiyn.html', 'anyqtama.html'
+  'test.html', 'praktika.html', 'refleksiya.html', 'zhagday.html', 'kvest.html', 'oiyn.html', 'anyqtama.html'
 ];
 
 function injectNav() {

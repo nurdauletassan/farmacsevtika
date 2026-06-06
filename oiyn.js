@@ -66,7 +66,6 @@ function initQuiz(area) {
   function show() {
     if (i >= qs.length) {
       area.innerHTML = `<h3>⚡ Нәтиже: ${score}/5</h3>`;
-      if (typeof completeQuest === 'function') completeQuest('oiyn', score * 5);
       return;
     }
     const q = qs[i];

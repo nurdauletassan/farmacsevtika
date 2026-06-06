@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рефлексия — Фармакогнозия</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Фармакогнозия</a>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Рефлексия</h1>
+        <p>Оқу процесін бағалау — 3 сұраққа жауап беріңіз</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container container--narrow">
+
+        <div class="practice-card practice-card--reflection reflection-page">
+          <p class="reflection-info">Атыңызды енгізіп, сабақ бойынша өз ойыңызды жазыңыз. Жауаптарыңыз Supabase-ке сақталады.</p>
+
+          <div class="reflection-name-card">
+            <label for="studentName">Атыңыз</label>
+            <input type="text" id="studentName" class="reflection-input" placeholder="Мысалы: Айгүл" autocomplete="name">
+          </div>
+
+          <div class="reflection-q reflection-q--green reflection-form">
+            <h4>Не білдім?</h4>
+            <p class="reflection-q__hint">Бүгінгі сабақтан алған жаңа білімім</p>
+            <textarea id="reflection1" placeholder="Жаңа білімімді жазыңыз..."></textarea>
+          </div>
+
+          <div class="reflection-q reflection-q--blue reflection-form">
+            <h4>Не қызықты болды?</h4>
+            <p class="reflection-q__hint">Маған ерекше әсер еткен ақпарат</p>
+            <textarea id="reflection2" placeholder="Ерекше әсер еткен ақпарат..."></textarea>
+          </div>
+
+          <div class="reflection-q reflection-q--purple reflection-form">
+            <h4>Болашақта қалай қолданамын?</h4>
+            <p class="reflection-q__hint">Оқуымда, тәжірибеде, мамандығымда</p>
+            <textarea id="reflection3" placeholder="Қолдану жоспарым..."></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--large" id="saveReflection">Сақтау</button>
+          <p class="reflection-saved" id="reflectionSaved"></p>
+        </div>
+
+        <div class="page-next">
+          <a href="zhagday.html" class="btn btn--primary">Келесі: Жағдайлық тапсырмалар →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Фармакогнозия</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="nav.js"></script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,74 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тірек жазба — Дәрілік өсімдіктер</title>
+  <title>Тірек жазба — Фармакогнозия</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-lecture">
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <a href="index.html" class="logo">Фармакогнозия</a>
       <nav class="nav"></nav>
-      <button class="burger" aria-label="Мәзірді ашу">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-hero--lecture">
       <div class="container">
+        <p class="page-hero__tag">📝 Теориялық негіз</p>
         <h1>Тірек жазба</h1>
-        <p>Дәрілік өсімдіктер мен шикізаттардың теориялық негіздері</p>
+        <p class="page-hero__desc">Антигельминтикалық шикізаттар — химия, фармакогнозия, сапа</p>
       </div>
     </section>
 
-    <section class="page-content">
-      <div class="container">
-        <div class="content-card">
-          <h3>1. Гельминтоздардың классификациясы</h3>
-          <p>Аскаридоз, энтеробиоз, тенiasis, описторхоз және басқа гельминтоздардың түрлері мен этиологиясы.</p>
-        </div>
-        <div class="content-card">
-          <h3>2. Антигельминттік әсер ету механизмі</h3>
-          <p>Дәрілік өсімдіктердің паразиттердің жүйке жүйесіне, тыныс алу жүйесіне және қоректенуіне әсер ету жолдары.</p>
-        </div>
-        <div class="content-card">
-          <h3>3. Айырдың фитохимиялық құрамы</h3>
-          <p>Сесқиттерпен, флавоноидтар, танниндер — антигельминттік белсенділікті қамтамасыз ететін негізгі биологиялық белсенді заттар.</p>
-        </div>
-        <div class="content-card">
-          <h3>4. Қара мүйіз — химиялық құрамы</h3>
-          <p>Жуглон, танниндер, органикалық қышқылдар. Аскарид личинкаларына қарсы әсер ету механизмі.</p>
-        </div>
-        <div class="content-card">
-          <h3>5. Тимьян мен эвкалипт</h3>
-          <p>Эфир майларының антисептикалық және антипаразиттік қасиеттері. Дұрыс дайындау және қолдану.</p>
-        </div>
-        <div class="content-card">
-          <h3>6. Қарақат және қызылмия</h3>
-          <p>Антимикробтық белсенділік, ішектегі паразиттерге қарсы қолдану, дозалау ережелері.</p>
-        </div>
-        <div class="content-card">
-          <h3>7. Теніяға қарсы өсімдіктер</h3>
-          <p>Аскарид (Male fern), қына, қызғылт сарымсақ — таспалы құрттарға қарсы дәстүрлі дәрілер.</p>
-        </div>
-        <div class="content-card">
-          <h3>8. Қауіпсіздік және қарсы көрсетілімдер</h3>
-          <p>Дәрілік өсімдіктерді қолдану кезіндегі ескертулер, уыттылық, жүктілік және балаларда қолдану шектеулері.</p>
-        </div>
-        <div class="page-next">
-          <a href="syzba.html" class="btn btn--primary">Келесі: Ақпараттық сызба →</a>
-        </div>
+    <section class="page-content page-content--lecture">
+      <div class="container container--narrow">
+        <article class="lecture">
+
+          <nav class="lecture__toc">
+            <h2 class="lecture__toc-title">Мазмұны</h2>
+            <ol class="lecture__toc-list">
+              <li><a href="#s1">Негізгі ұғымдар</a></li>
+              <li><a href="#s2">Химиялық топтар</a></li>
+              <li><a href="#s3">Шикізаттар сипаты</a></li>
+              <li><a href="#s4">Фармакогнозиялық талдау</a></li>
+              <li><a href="#s5">Фармакопеялық көрсеткіштер</a></li>
+              <li><a href="#s6">Уыттылық</a></li>
+              <li><a href="#s7">Қолдану ережелері</a></li>
+            </ol>
+          </nav>
+
+          <!-- 1 -->
+          <section class="lecture-step" id="s1">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">1</span>
+              <h2 class="lecture-step__title">Негізгі ұғымдар</h2>
+            </div>
+            <div class="lecture-step__body">
+              <p><strong>Антигельминтикалық әсер</strong> — гельминттерді жою немесе залалсыздандыру.</p>
+              <p><strong>Әсер ету нысандары:</strong></p>
+              <ul>
+                <li><strong>Цестодтар</strong> — таспа құрттар</li>
+                <li><strong>Нематодтар</strong> — дөңгелек құрттар</li>
+                <li><strong>Трематодтар</strong> — жалпақ құрттар</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="lecture-step" id="s2">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">2</span>
+              <h2 class="lecture-step__title">Химиялық топтар және өкілдері</h2>
+            </div>
+            <div class="lecture-step__body">
+              <div class="tirek-chem">
+                <div class="tirek-chem__row"><span>Флороглюцид туындылары</span><strong>→ Еркек қырыққұлағы (филицин)</strong></div>
+                <div class="tirek-chem__row"><span>Сесквитерпен лактондар</span><strong>→ Жусан түрлері (сантонин, артемизинин)</strong></div>
+                <div class="tirek-chem__row"><span>Алкалоидтар</span><strong>→ Анар қабығы (пелетьерин)</strong></div>
+                <div class="tirek-chem__row"><span>Күкіртті қосылыстар</span><strong>→ Сарымсақ (аллицин)</strong></div>
+                <div class="tirek-chem__row"><span>Эфир майлары</span><strong>→ Пижма (туйон), тыңғылық (тимол), қалампыр (эвгенол)</strong></div>
+                <div class="tirek-chem__row"><span>Тритерпендер</span><strong>→ Асқабақ дәні (кукурбитацин)</strong></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3 -->
+          <section class="lecture-step" id="s3">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">3</span>
+              <h2 class="lecture-step__title">Әр шикізаттың сипаты</h2>
+            </div>
+            <div class="lecture-step__body">
+
+              <div class="tirek-plant" id="filix">
+                <h3 class="tirek-plant__title">🌿 Еркек қырыққұлағы <em>Dryopteris filix-mas</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Тамырсабақ</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Филицин</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Таспа құрттарды салдандырады, глюкоза алмасуын бұзады</p></div>
+                  <div class="tirek-item tirek-item--warn"><span>Уыттылығы</span><p>Жоғары (көру нерві, бауыр)</p></div>
+                  <div class="tirek-item"><span>Қарсы көрсетілім</span><p>Жүктілік, бауыр, бүйрек, анемия, жүрек жеткіліксіздігі</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Күз немесе көктем</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 50°C дейін</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>Тізім Б, құрғақ қараңғы жерде, 2 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🌼 Цина жусаны <em>Artemisia cina</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Гүлшоғыры</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Сантонин</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Аскаридаларға (жүйке салдануы)</p></div>
+                  <div class="tirek-item tirek-item--warn"><span>Уыттылығы</span><p>Орташа (ксантопсия, галлюцинация)</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Шілде–тамыз</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 40°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>3 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🎃 Асқабақ <em>Cucurbita pepo</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Дәні</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Кукурбитацин</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Таспа және дөңгелек құрттарды салдандырады</p></div>
+                  <div class="tirek-item tirek-item--safe"><span>Уыттылығы</span><p>Жоқ (жүктілер мен балаларға қолдануға болады)</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Қыркүйек–қазан</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Пеште 50–60°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>Мата қапта, салқын жерде, 1 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🧄 Сарымсақ <em>Allium sativum</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Пиязы</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Аллицин (күкіртті)</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Нематодтарға, ішек микрофлорасын жақсартады</p></div>
+                  <div class="tirek-item tirek-item--safe"><span>Уыттылығы</span><p>Төмен</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Шілде–тамыз</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 35°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>6 ай</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🍎 Анар <em>Punica granatum</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Жеміс қабығы</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Пелетьерин, таниндер</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Таспа құрттарды салдандырады</p></div>
+                  <div class="tirek-item tirek-item--warn"><span>Уыттылығы</span><p>Орташа</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Қазан–қараша</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Күнде немесе 40–50°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>2 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🌸 Қалампыр <em>Syzygium aromaticum</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Бүршік</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Эвгенол (эфир майы 70–90%)</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Нематодтарға, антисептик</p></div>
+                  <div class="tirek-item tirek-item--safe"><span>Уыттылығы</span><p>Төмен</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Қыркүйек–қазан</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Күнде немесе 40°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>Герметикалық ыдыста, 3 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🌿 Ащы жусан <em>Artemisia absinthium</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Шөбі</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Артемизинин, туйон</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Аскаридаларға, ас қорытуды жақсартады</p></div>
+                  <div class="tirek-item tirek-item--warn"><span>Уыттылығы</span><p>Орташа (туйон — конвульсия)</p></div>
+                  <div class="tirek-item"><span>Қарсы көрсетілім</span><p>Жүктілік, эпилепсия, ГЭРБ</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Маусым–шілде</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 35°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>2 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🌼 Пижма <em>Tanacetum vulgare</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Гүлшоғыры</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Туйон (монотерпен)</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Аскаридоз, энтеробиоз</p></div>
+                  <div class="tirek-item tirek-item--warn"><span>Уыттылығы</span><p>Жоғары (эпилепсиялық ұстамалар)</p></div>
+                  <div class="tirek-item"><span>Қарсы көрсетілім</span><p>Жүктілік, 12 жасқа дейін</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Шілде–тамыз</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 40°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>2 жыл</p></div>
+                </div>
+              </div>
+
+              <div class="tirek-plant">
+                <h3 class="tirek-plant__title">🍃 Тыңғылық <em>Thymus vulgaris</em></h3>
+                <div class="tirek-grid">
+                  <div class="tirek-item"><span>Шикізаты</span><p>Шөбі</p></div>
+                  <div class="tirek-item"><span>Белсенді заты</span><p>Тимол (эфир майы)</p></div>
+                  <div class="tirek-item"><span>Әсері</span><p>Анкилостомалар, нематодтар</p></div>
+                  <div class="tirek-item tirek-item--safe"><span>Уыттылығы</span><p>Төмен</p></div>
+                  <div class="tirek-item"><span>Жинау</span><p>Маусым–шілде</p></div>
+                  <div class="tirek-item"><span>Кептіру</span><p>Көлеңкеде, 35°C</p></div>
+                  <div class="tirek-item"><span>Сақтау</span><p>2 жыл</p></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section class="lecture-step" id="s4">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">4</span>
+              <h2 class="lecture-step__title">Фармакогнозиялық талдау</h2>
+            </div>
+            <div class="lecture-step__body">
+              <ol class="lecture-step__substeps">
+                <li><strong>Макроскопия</strong> — пішіні, түсі, иісі, дәмі</li>
+                <li><strong>Микроскопия</strong> — ұлпалық құрылымы, диагностикалық белгілері (түкшелер, эфир майлы бездер, кристалдар)</li>
+                <li><strong>Сапалық химиялық реакциялар</strong> — БАЗ тобына (алкалоидтар, флороглюцидтер, эфир майлары)</li>
+                <li><strong>Сандық анықтау</strong> — экстрактивті заттар, ылғалдылық, күл мөлшері, БАЗ мөлшері (мысалы, филицин 2%-дан кем емес)</li>
+                <li><strong>Қоспалар</strong> — органикалық (басқа өсімдік бөліктері), минералдық (топырақ)</li>
+              </ol>
+            </div>
+          </section>
+
+          <!-- 5 -->
+          <section class="lecture-step" id="s5">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">5</span>
+              <h2 class="lecture-step__title">Фармакопеялық көрсеткіштер</h2>
+            </div>
+            <div class="lecture-step__body">
+              <div class="tirek-chem">
+                <div class="tirek-chem__row"><span>Еркек қырыққұлағы тамыры</span><strong>Ылғалдылық ≤12%, күл ≤6%, филицин ≥2%</strong></div>
+                <div class="tirek-chem__row"><span>Сарымсақ пиязы</span><strong>Эфир майы ≥0,5%</strong></div>
+                <div class="tirek-chem__row"><span>Қалампыр бүршігі</span><strong>Эфир майы ≥15%</strong></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section class="lecture-step" id="s6">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">6</span>
+              <h2 class="lecture-step__title">Уыттылық және жанама әсерлер</h2>
+            </div>
+            <div class="lecture-step__body">
+              <div class="lecture-step__warning"><strong>Филицин:</strong> көру нервінің атрофиясы, бауыр некрозы, диарея</div>
+              <div class="lecture-step__warning"><strong>Сантонин:</strong> ксантопсия (сары түсті көру), бас айналу, галлюцинация</div>
+              <div class="lecture-step__warning"><strong>Туйон:</strong> конвульсиялар, эпилепсиялық ұстамалар, бауыр зақымдануы</div>
+              <div class="lecture-step__warning"><strong>Пелетьерин:</strong> жүрек айну, құсу, брадикардия</div>
+            </div>
+          </section>
+
+          <!-- 7 -->
+          <section class="lecture-step" id="s7">
+            <div class="lecture-step__header">
+              <span class="lecture-step__number">7</span>
+              <h2 class="lecture-step__title">Қолдану ережелері</h2>
+            </div>
+            <div class="lecture-step__body">
+              <ol class="lecture-step__substeps">
+                <li><strong>Дәрігер тағайындауы</strong> қажет</li>
+                <li>Емдеу алдында <strong>іш жүргізетін дәрілер</strong> беріледі (құрттарды шығару үшін)</li>
+                <li><strong>Майлы, етті тағамдар</strong> шектеледі</li>
+                <li><strong>Дозаны қатаң сақтау</strong> (әсіресе улы шикізаттар)</li>
+              </ol>
+              <div class="lecture-step__summary">
+                <h3>📌 Қорытынды</h3>
+                <p>Әр шикізаттың өз химиялық тобы, әсер ету механизмі, уыттылығы және фармакопеялық нормалары бар. Дұрыс жинау, кептіру, сақтау және дәрігер бақылауы — қауіпсіз қолданудың негізі.</p>
+              </div>
+              <div class="page-next">
+                <a href="syzba.html" class="btn btn--primary">Келесі: Ақпараттық сызба →</a>
+              </div>
+            </div>
+          </section>
+
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2026 Құрттарға және паразиттерге қарсы дәрілік өсімдіктер — Оқу курсы</p>
-    </div>
+    <div class="container"><p>© 2026 Фармакогнозия — Оқу платформасы</p></div>
   </footer>
   <script src="nav.js"></script>
   <script src="game.js"></script>
