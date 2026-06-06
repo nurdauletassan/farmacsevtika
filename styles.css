@@ -1553,7 +1553,7 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
 }
 
 /* ─── Game & AI Tutor ─── */
-/* ─── Greenhouse (main page hero) ─── */
+/* ─── Жасыл дәріхана (main page hero) ─── */
 .hero--greenhouse {
   min-height: 88vh;
   min-height: 88dvh;
@@ -2510,7 +2510,39 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
 
 /* Practice & situation */
 .practice-card, .situation-card { margin-bottom: 20px; }
-.practice-card h3, .situation-card h3 { margin-bottom: 8px; }
+.practice-card h3, .situation-card h3 { margin-bottom: 12px; }
+
+.situation-card__scenario {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(134, 239, 172, 0.12);
+  border-left: 3px solid #3b82f6;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  line-height: 1.65;
+  color: var(--text-muted-on-dark);
+}
+
+.situation-card__scenario strong {
+  color: #93c5fd;
+}
+
+.situation-card__questions {
+  padding-left: 20px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+  line-height: 1.6;
+}
+
+.situation-card__questions li {
+  margin-bottom: 8px;
+}
+
+.situation-card__questions li::marker {
+  color: #86efac;
+  font-weight: 700;
+}
 
 .practice-input, .situation-input {
   width: 100%;

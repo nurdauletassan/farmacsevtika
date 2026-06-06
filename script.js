@@ -47,7 +47,7 @@ function renderStructureGrid() {
     { href: 'test.html', label: 'Тест', icon: '✅', badge: '15' },
     { href: 'praktika.html', label: 'Практика', icon: '🔬', badge: '5' },
     { href: 'refleksiya.html', label: 'Рефлексия', icon: '💭', badge: '3' },
-    { href: 'zhagday.html', label: 'Жағдай', icon: '💡', badge: '4' },
+    { href: 'zhagday.html', label: 'Жағдай', icon: '💡', badge: '10' },
     { href: 'kvest.html', label: 'Квест', icon: '🗺️', badge: '' },
     { href: 'oiyn.html', label: 'Ойындар', icon: '🎮', badge: '6' },
     { href: 'anyqtama.html', label: 'Анықтамалық', icon: '📖', badge: '' }
