@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рефлексия — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav">
+        <a href="lekciya.html" class="nav__link">Лекция</a>
+        <a href="teoriya.html" class="nav__link">Теория</a>
+        <a href="refleksiya.html" class="nav__link">Рефлексия</a>
+        <a href="testy.html" class="nav__link">Тесттер</a>
+        <a href="video.html" class="nav__link">Бейне</a>
+      </nav>
+      <button class="burger" aria-label="Мәзірді ашу">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Рефлексия</h1>
+        <p style="margin-top:8px; opacity:0.9;">Өз біліміңізді талдаңыз және ойларыңызды жазыңыз</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="content-card reflection-form">
+          <label for="reflection1">Тапсырма 1: Сіздің ойыңызша, қай дәрілік өсімдік құрттарға қарсы ең тиімді?</label>
+          <textarea id="reflection1" placeholder="Жауабыңызды мұнда жазыңыз..."></textarea>
+        </div>
+
+        <div class="content-card reflection-form">
+          <label for="reflection2">Тапсырма 2: Дәрілік өсімдіктерді қолданудың артықшылықтары мен кемшіліктерін сипаттаңыз.</label>
+          <textarea id="reflection2" placeholder="Артықшылықтар мен кемшіліктерді жазыңыз..."></textarea>
+        </div>
+
+        <div class="content-card reflection-form">
+          <label for="reflection3">Тапсырма 3: Курс материалдарынан не үйрендіңіз? Болашақта қалай қолданасыз?</label>
+          <textarea id="reflection3" placeholder="Үйренген біліміңізді сипаттаңыз..."></textarea>
+        </div>
+
+        <button class="btn btn--primary btn--large" id="saveReflection">Сақтау</button>
+        <p class="reflection-saved" id="reflectionSaved">✓ Жауаптарыңыз сақталды!</p>
+
+        <div class="page-next">
+          <a href="index.html" class="btn btn--primary">Аяқтау — Басты бетке →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Құрттарға және паразиттерге қарсы дәрілік өсімдіктер — Оқу курсы</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

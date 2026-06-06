@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тесттер — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav">
+        <a href="lekciya.html" class="nav__link">Лекция</a>
+        <a href="teoriya.html" class="nav__link">Теория</a>
+        <a href="refleksiya.html" class="nav__link">Рефлексия</a>
+        <a href="testy.html" class="nav__link">Тесттер</a>
+        <a href="video.html" class="nav__link">Бейне</a>
+      </nav>
+      <button class="burger" aria-label="Мәзірді ашу">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Тесттер</h1>
+        <p style="margin-top:8px; opacity:0.9;">Біліміңізді тексеріңіз</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="content-card">
+          <div class="test-question">
+            <h3>1. Аскаридозға қарсы қолданылатын дәрілік өсімдік қайсы?</h3>
+            <div class="test-options">
+              <button class="test-option" data-correct="false">А) Айыр</button>
+              <button class="test-option" data-correct="true">Б) Қара мүйіз</button>
+              <button class="test-option" data-correct="false">В) Қызғылт сарымсақ</button>
+              <button class="test-option" data-correct="false">Г) Эвкалипт</button>
+            </div>
+          </div>
+
+          <div class="test-question">
+            <h3>2. Айыр өсімдігінің антигельминттік әсерін қамтамасыз ететін негізгі заттар:</h3>
+            <div class="test-options">
+              <button class="test-option" data-correct="false">А) Алкалоидтар</button>
+              <button class="test-option" data-correct="true">Б) Сесқиттерпен</button>
+              <button class="test-option" data-correct="false">В) Гликозидтар</button>
+              <button class="test-option" data-correct="false">Г) Майлар</button>
+            </div>
+          </div>
+
+          <div class="test-question">
+            <h3>3. Теніяға (таспалы құртқа) қарсы қолданылатын өсімдік:</h3>
+            <div class="test-options">
+              <button class="test-option" data-correct="false">А) Қызылмия</button>
+              <button class="test-option" data-correct="false">Б) Тимьян</button>
+              <button class="test-option" data-correct="true">В) Аскарид (Male fern)</button>
+              <button class="test-option" data-correct="false">Г) Қарақат</button>
+            </div>
+          </div>
+
+          <div class="test-question">
+            <h3>4. Дәрілік өсімдіктердің паразиттерге қарсы әсер ету механизмі:</h3>
+            <div class="test-options">
+              <button class="test-option" data-correct="false">А) Тек қана ішекті тазалау</button>
+              <button class="test-option" data-correct="true">Б) Жүйке жүйесіне, тыныс алуға және қоректенуге әсер ету</button>
+              <button class="test-option" data-correct="false">В) Иммунитетті ғана арттыру</button>
+              <button class="test-option" data-correct="false">Г) Қан қысымын төмендету</button>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--large" id="submitTest">Тексеру</button>
+          <div class="test-result" id="testResult"></div>
+        </div>
+
+        <div class="page-next">
+          <a href="video.html" class="btn btn--primary">Келесі: Бейне →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Құрттарға және паразиттерге қарсы дәрілік өсімдіктер — Оқу курсы</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
