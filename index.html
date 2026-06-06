@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Құрттарға және паразиттерге қарсы дәрілік өсімдіктер</title>
+  <title>Басты бет — Дәрілік өсімдіктер</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,18 +11,8 @@
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
-      <nav class="nav">
-        <a href="lekciya.html" class="nav__link">Лекция</a>
-        <a href="teoriya.html" class="nav__link">Теория</a>
-        <a href="refleksiya.html" class="nav__link">Рефлексия</a>
-        <a href="testy.html" class="nav__link">Тесттер</a>
-        <a href="video.html" class="nav__link">Бейне</a>
-      </nav>
-      <button class="burger" aria-label="Мәзірді ашу">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -30,46 +20,33 @@
     <section class="hero hero--game">
       <div class="container hero__inner">
         <div class="hero__game-content">
-          <p class="hero__label">🎮 Оқу ойыны</p>
-          <h1 class="hero__title">
-            Құрттарға және паразиттерге қарсы дәрілік өсімдіктер
-          </h1>
-          <p class="hero__subtitle">
-            AI көмекші Ұлбосын сені сапар бойы жетектеп отырады. 
-            Әр қадамда XP жинап, деңгейіңді арттыр!
-          </p>
-          <a href="lekciya.html" class="btn btn--primary btn--game quest-start">
-            🚀 Квестті бастау
-          </a>
+          <p class="hero__label">🎮 Оқу платформасы</p>
+          <h1 class="hero__title">Құрттарға және паразиттерге қарсы дәрілік өсімдіктер</h1>
+          <p class="hero__subtitle">AI көмекші Ұлбосын сені сабақ бойы жетектеп отырады. Дәріс, тест, практика, квест және ойындар арқылы үйрен!</p>
+          <a href="daris.html" class="btn btn--primary btn--game">🚀 Оқуды бастау</a>
         </div>
         <div class="hero__tutor-card">
           <div class="tutor-card">
             <div class="tutor-card__avatar">🌿🤖</div>
             <div class="tutor-card__bubble">
               <strong>Ұлбосын:</strong>
-              <p>Сәлем! Мен сенің жеке оқу көмекшіңмін. Дәрілік өсімдіктерді ойын сияқты үйренейік!</p>
+              <p>Сәлем! 11 бөлімнен тұратын оқу сапарын бастайық. Әр қадамда XP жинайсың!</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="quest-section">
+    <section class="structure-section">
       <div class="container">
-        <h2 class="quest-section__title">🗺️ Оқу картасы</h2>
-        <p class="quest-section__sub">Қадамдарды ретімен өтіп, барлық квесттерді аяқта</p>
-        <div class="quest-map" id="questMap"></div>
+        <h2 class="structure-section__title">📋 Сабақ құрылымы</h2>
+        <div class="structure-grid" id="structureGrid"></div>
       </div>
     </section>
-
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Дәрілік өсімдіктер — Оқу ойыны</p>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер — Оқу платформасы</p></div></footer>
+  <script src="nav.js"></script>
   <script src="game.js"></script>
   <script src="script.js"></script>
 </body>

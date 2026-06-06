@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сұрақтар жауаптары</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="answers-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Сұрақтар жауаптары</h1>
+        <p>Оқушылардың 10 ашық сұраққа жауаптары</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container">
+        <div class="answers-toolbar">
+          <input type="search" id="answersSearch" class="reflection-input" placeholder="Аты бойынша іздеу...">
+          <button class="btn btn--primary" id="refreshAnswers">Жаңарту</button>
+        </div>
+        <p class="answers-status" id="answersStatus">Жүктелуде...</p>
+        <div class="answers-list" id="answersList"></div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="questions.js"></script>
+  <script src="suraqtar-answers.js"></script>
+</body>
+</html>

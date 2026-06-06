@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof injectNav === 'function') injectNav();
   initMobileNav();
   initActiveNav();
+  initQuestions();
   initGame();
-  initTests();
+  initTestSubmits();
+  initSuraqtar();
   initReflection();
+  renderStructureGrid();
 });
 
 function initMobileNav() {
@@ -31,12 +35,178 @@ function initActiveNav() {
   });
 }
 
-function initTests() {
-  const submitBtn = document.getElementById('submitTest');
+function renderStructureGrid() {
+  const grid = document.getElementById('structureGrid');
+  if (!grid) return;
+
+  const items = [
+    { href: 'daris.html', label: 'Дәріс', icon: '📚', badge: '' },
+    { href: 'tirek.html', label: 'Тірек жазба', icon: '📝', badge: '' },
+    { href: 'syzba.html', label: 'Ақпараттық сызба', icon: '🗺️', badge: '' },
+    { href: 'suraqtar.html', label: 'Сұрақтар', icon: '❓', badge: '10' },
+    { href: 'test.html', label: 'Тест', icon: '✅', badge: '15' },
+    { href: 'praktika.html', label: 'Практика', icon: '🔬', badge: '6' },
+    { href: 'zhagday.html', label: 'Жағдай', icon: '💡', badge: '4' },
+    { href: 'kvest.html', label: 'Квест', icon: '🗺️', badge: '' },
+    { href: 'oiyn.html', label: 'Ойындар', icon: '🎮', badge: '6' },
+    { href: 'anyqtama.html', label: 'Анықтамалық', icon: '📖', badge: '' }
+  ];
+
+  grid.innerHTML = items.map((item, i) => `
+    <a href="${item.href}" class="structure-card structure-card--${i % 6}">
+      <span class="structure-card__icon">${item.icon}</span>
+      <strong>${item.label}</strong>
+      ${item.badge ? `<span class="structure-card__badge">${item.badge}</span>` : ''}
+    </a>
+  `).join('');
+}
+
+function initQuestions() {
+  if (typeof SURAQTAR !== 'undefined' && typeof renderOpenQuestions === 'function') {
+    renderOpenQuestions('suraqtarQuestions', SURAQTAR);
+  }
+  if (typeof TEST15 !== 'undefined' && typeof renderQuestions === 'function') {
+    renderQuestions('testQuestions', TEST15);
+  }
+  bindTestOptionClicks();
+}
+
+function bindTestOptionClicks() {
+  document.querySelectorAll('.test-option').forEach(option => {
+    if (option.dataset.bound) return;
+    option.dataset.bound = '1';
+    option.addEventListener('click', () => {
+      const parent = option.closest('.test-question');
+      if (!parent || parent.classList.contains('checked')) return;
+      parent.querySelectorAll('.test-option').forEach(o => o.classList.remove('selected'));
+      option.classList.add('selected');
+    });
+  });
+}
+
+function initTestSubmits() {
+  setupTestSubmit('submitTest', 'testResult', 'test');
+}
+
+function showSuraqtarMessage(text, type = 'success') {
+  const msg = document.getElementById('suraqtarResult');
+  if (!msg) return;
+  msg.textContent = text;
+  msg.className = `reflection-saved show ${type === 'error' ? 'error' : ''}`;
+}
+
+function initSuraqtar() {
+  const saveBtn = document.getElementById('submitSuraqtar');
+  const nameInput = document.getElementById('suraqtarStudentName');
+  if (!saveBtn || !nameInput) return;
+
+  const textareas = () => document.querySelectorAll('.open-question__input');
+  const savedName = localStorage.getItem('suraqtar_student_name');
+  if (savedName) {
+    nameInput.value = savedName;
+    loadSuraqtarAnswers(savedName, textareas());
+  }
+
+  nameInput.addEventListener('change', () => {
+    const name = nameInput.value.trim();
+    if (name) loadSuraqtarAnswers(name, textareas());
+  });
+
+  saveBtn.addEventListener('click', async () => {
+    const name = nameInput.value.trim();
+    if (!name) {
+      showSuraqtarMessage('Алдымен атыңызды енгізіңіз!', 'error');
+      nameInput.focus();
+      return;
+    }
+
+    const answers = Array.from(textareas()).map(t => t.value);
+    const empty = answers.filter(a => !a.trim()).length;
+
+    if (empty === answers.length) {
+      showSuraqtarMessage('Кем дегенде бір сұраққа жауап жазыңыз!', 'error');
+      return;
+    }
+
+    localStorage.setItem('suraqtar_student_name', name);
+    saveSuraqtarLocally(name, answers);
+
+    const client = getSupabaseClient();
+    if (!client) {
+      showSuraqtarMessage(
+        empty > 0
+          ? `Жауаптар браузерде сақталды. ${empty} сұрақ бос қалды.`
+          : 'Supabase қосылмаған. Барлық жауаптар браузерде сақталды.'
+      );
+      if (typeof completeQuest === 'function') completeQuest('suraqtar');
+      return;
+    }
+
+    saveBtn.disabled = true;
+    showSuraqtarMessage('Сақталуда...');
+
+    const row = { student_name: name, updated_at: new Date().toISOString() };
+    answers.forEach((a, i) => { row[`answer_${i + 1}`] = a || ''; });
+
+    const { error } = await client.from('suraqtar_answers').upsert(row, { onConflict: 'student_name' });
+
+    saveBtn.disabled = false;
+
+    if (error) {
+      showSuraqtarMessage('Қате: ' + error.message, 'error');
+      return;
+    }
+
+    showSuraqtarMessage(
+      empty > 0
+        ? `✓ Сақталды! ${empty} сұрақ әлі бос.`
+        : '✓ Барлық жауаптар Supabase-ке сақталды!'
+    );
+    if (typeof completeQuest === 'function') completeQuest('suraqtar');
+  });
+}
+
+function saveSuraqtarLocally(name, answers) {
+  answers.forEach((answer, i) => {
+    localStorage.setItem(`suraqtar_${name}_${i}`, answer || '');
+  });
+}
+
+async function loadSuraqtarAnswers(name, textareas) {
+  const client = getSupabaseClient();
+
+  if (!client) {
+    textareas.forEach((textarea, i) => {
+      textarea.value = localStorage.getItem(`suraqtar_${name}_${i}`) || '';
+    });
+    return;
+  }
+
+  const { data, error } = await client
+    .from('suraqtar_answers')
+    .select('answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10')
+    .eq('student_name', name)
+    .maybeSingle();
+
+  if (error || !data) {
+    textareas.forEach((textarea, i) => {
+      textarea.value = localStorage.getItem(`suraqtar_${name}_${i}`) || '';
+    });
+    return;
+  }
+
+  textareas.forEach((textarea, i) => {
+    textarea.value = data[`answer_${i + 1}`] || '';
+  });
+}
+
+function setupTestSubmit(btnId, resultId, questId) {
+  const submitBtn = document.getElementById(btnId);
   if (!submitBtn) return;
 
   submitBtn.addEventListener('click', () => {
-    const questions = document.querySelectorAll('.test-question');
+    const container = submitBtn.closest('.container') || document;
+    const questions = container.querySelectorAll('.test-question');
     let correct = 0;
     let answered = 0;
 
@@ -48,7 +218,7 @@ function initTests() {
       }
     });
 
-    const result = document.getElementById('testResult');
+    const result = document.getElementById(resultId);
     if (!result) return;
 
     if (answered < questions.length) {
@@ -62,14 +232,9 @@ function initTests() {
       q.querySelectorAll('.test-option').forEach(option => {
         const isCorrect = option.dataset.correct === 'true';
         const isSelected = option.classList.contains('selected');
-
         option.classList.remove('correct', 'wrong');
-
-        if (isCorrect) {
-          option.classList.add('correct');
-        } else if (isSelected) {
-          option.classList.add('wrong');
-        }
+        if (isCorrect) option.classList.add('correct');
+        else if (isSelected) option.classList.add('wrong');
       });
     });
 
@@ -79,18 +244,8 @@ function initTests() {
 
     if (typeof completeQuest === 'function') {
       const bonus = typeof getTestBonusXp === 'function' ? getTestBonusXp(percent) : 0;
-      completeQuest('testy', bonus);
+      completeQuest(questId, bonus);
     }
-  });
-
-  document.querySelectorAll('.test-option').forEach(option => {
-    option.addEventListener('click', () => {
-      const parent = option.closest('.test-question');
-      if (parent.classList.contains('checked')) return;
-
-      parent.querySelectorAll('.test-option').forEach(o => o.classList.remove('selected'));
-      option.classList.add('selected');
-    });
   });
 }
 
@@ -144,9 +299,7 @@ function initReflection() {
     if (!client) {
       saveReflectionLocally(name, answers, textareas);
       showReflectionMessage('Supabase қосылмаған. Жауаптар браузерде сақталды.');
-      if (typeof completeQuest === 'function') {
-        completeQuest('refleksiya');
-      }
+      if (typeof completeQuest === 'function') completeQuest('praktika');
       return;
     }
 
@@ -172,9 +325,7 @@ function initReflection() {
     }
 
     showReflectionMessage('✓ Жауаптарыңыз Supabase-ке сақталды!');
-    if (typeof completeQuest === 'function') {
-      completeQuest('refleksiya');
-    }
+    if (typeof completeQuest === 'function') completeQuest('praktika');
   });
 }
 

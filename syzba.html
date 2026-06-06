@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ақпараттық сызба — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Ақпараттық сызба</h1>
+        <p>Дәрілік өсімдіктер паразиттерге қалай әсер етеді — қадамдық схема</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container container--narrow">
+
+        <div class="diagram-intro">
+          <p>Бұл сызба <strong>3 бөлімнен</strong> тұрады: әсер ету тізбегі, өсімдік–ауру сәйкестігі және әсер ету жолдары.</p>
+        </div>
+
+        <!-- 1. Негізгі тізбек -->
+        <h2 class="diagram-section-title">1️⃣ Әсер ету тізбегі</h2>
+        <div class="flow-chart">
+          <div class="flow-step flow-step--danger">
+            <span class="flow-step__num">1</span>
+            <div class="flow-step__body">
+              <strong>🦠 Паразит организмге кіреді</strong>
+              <p>Аскарид, острица, тенія сияқты гельминттер ішекте тұрады</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step flow-step--plant">
+            <span class="flow-step__num">2</span>
+            <div class="flow-step__body">
+              <strong>🌿 Дәрілік өсімдік қолданылады</strong>
+              <p>Шай, тұндырма немесе ұнтақ түрінде ішіледі</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step flow-step--chem">
+            <span class="flow-step__num">3</span>
+            <div class="flow-step__body">
+              <strong>⚗️ Белсенді заттар бөледі</strong>
+              <p>Сесқиттерпен, жуглон, эфир майлары ішекке түседі</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step flow-step--target">
+            <span class="flow-step__num">4</span>
+            <div class="flow-step__body">
+              <strong>🎯 Паразитке әсер етеді</strong>
+              <p>Жүйке жүйесі, тыныс алу немесе қоректену бұзылады</p>
+            </div>
+          </div>
+          <div class="flow-connector">↓</div>
+          <div class="flow-step flow-step--result">
+            <span class="flow-step__num">5</span>
+            <div class="flow-step__body">
+              <strong>✅ Нәтиже</strong>
+              <p>Құрт әлсірейді, өледі немесе организмнен шығады</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Өсімдік — ауру карта -->
+        <h2 class="diagram-section-title">2️⃣ Өсімдік → Ауру сәйкестігі</h2>
+        <div class="plant-map">
+          <div class="plant-map__card plant-map__card--green">
+            <div class="plant-map__head">
+              <span class="plant-map__icon">🌿</span>
+              <div>
+                <h3>Айыр</h3>
+                <span class="plant-map__latin">Artemisia</span>
+              </div>
+            </div>
+            <div class="plant-map__row"><span>Белсенді зат:</span> <strong>Сесқиттерпен</strong></div>
+            <div class="plant-map__row"><span>Қарсы:</span> <strong>Құрттар (жалпы)</strong></div>
+            <div class="plant-map__row"><span>Дайындау:</span> Шай — 15–20 мин қайнату</div>
+          </div>
+
+          <div class="plant-map__card plant-map__card--brown">
+            <div class="plant-map__head">
+              <span class="plant-map__icon">🌸</span>
+              <div>
+                <h3>Қара мүйіз</h3>
+                <span class="plant-map__latin">Juglans nigra</span>
+              </div>
+            </div>
+            <div class="plant-map__row"><span>Белсенді зат:</span> <strong>Жуглон</strong></div>
+            <div class="plant-map__row"><span>Қарсы:</span> <strong>Аскаридоз</strong></div>
+            <div class="plant-map__row"><span>Дайындау:</span> Тұндырма — 8–10 сағат</div>
+          </div>
+
+          <div class="plant-map__card plant-map__card--teal">
+            <div class="plant-map__head">
+              <span class="plant-map__icon">🍃</span>
+              <div>
+                <h3>Тимьян</h3>
+                <span class="plant-map__latin">Thymus</span>
+              </div>
+            </div>
+            <div class="plant-map__row"><span>Белсенді зат:</span> <strong>Тимол (эфир майы)</strong></div>
+            <div class="plant-map__row"><span>Қарсы:</span> <strong>Антисептика, микробтар</strong></div>
+            <div class="plant-map__row"><span>Дайындау:</span> Шай немесе ингаляция</div>
+          </div>
+
+          <div class="plant-map__card plant-map__card--purple">
+            <div class="plant-map__head">
+              <span class="plant-map__icon">🌾</span>
+              <div>
+                <h3>Қыран құйрық</h3>
+                <span class="plant-map__latin">Male fern</span>
+              </div>
+            </div>
+            <div class="plant-map__row"><span>Белсенді зат:</span> <strong>Филиксин</strong></div>
+            <div class="plant-map__row"><span>Қарсы:</span> <strong>Тенія (таспалы құрт)</strong></div>
+            <div class="plant-map__row plant-map__row--warn"><span>⚠️</span> Уытты — тек дәрігер бақылауында!</div>
+          </div>
+        </div>
+
+        <!-- 3. Әсер ету жолдары -->
+        <h2 class="diagram-section-title">3️⃣ Әсер ету жолдары</h2>
+        <div class="mechanism-grid">
+          <div class="mechanism-card">
+            <div class="mechanism-card__icon">🧠</div>
+            <h3>Жүйке жүйесіне</h3>
+            <p>Белсенді зат паразиттің жүйке клеткаларын бұзады → қозғалысы әлсірейді</p>
+            <span class="mechanism-card__example">Мысал: сесқиттерпен, филиксин</span>
+          </div>
+          <div class="mechanism-card">
+            <div class="mechanism-card__icon">🫁</div>
+            <h3>Тыныс алуға</h3>
+            <p>Паразит оттегіні сорғыта алмайды → тыныс алу тоқтайды</p>
+            <span class="mechanism-card__example">Мысал: жуглон, эфир майлары</span>
+          </div>
+          <div class="mechanism-card">
+            <div class="mechanism-card__icon">🍽️</div>
+            <h3>Қоректенуге</h3>
+            <p>Құрт тамақтануын бұзады → әлсіреп, өліме қалады</p>
+            <span class="mechanism-card__example">Мысал: танниндер, алкалоидтар</span>
+          </div>
+        </div>
+
+        <div class="diagram-legend">
+          <h3>📌 Есте сақтау</h3>
+          <ul>
+            <li>Бір өсімдік — бірнеше ауруға емес, <strong>нақты көрсеткішке</strong> қолданылады</li>
+            <li>Дәрілік өсімдіктер — <strong>дәрігермен келісіп</strong>, дұрыс дозамен қолданылады</li>
+            <li>Кешенді емдеу: гигиена + дәрі + дәрілік өсімдік</li>
+          </ul>
+        </div>
+
+        <div class="page-next"><a href="suraqtar.html" class="btn btn--primary">Келесі: Сұрақтар →</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер</p></div></footer>
+  <script src="nav.js"></script><script src="game.js"></script><script src="script.js"></script>
+</body>
+</html>

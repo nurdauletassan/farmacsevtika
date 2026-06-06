@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ойындар — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><h1>Ойындар</h1><p>6 әртүрлі ойын — білімді бекіту</p></div></section>
+    <section class="page-content"><div class="container">
+      <div class="games-grid">
+        <button class="game-card" data-game="memory"><span>🃏</span><strong>Жады ойыны</strong><p>Жұптарды тап</p></button>
+        <button class="game-card" data-game="quiz"><span>⚡</span><strong>Жылдам викторина</strong><p>5 сұрақ</p></button>
+        <button class="game-card" data-game="truefalse"><span>✅</span><strong>Дұрыс/Бұрыс</strong><p>10 өтініш</p></button>
+        <button class="game-card" data-game="match"><span>🔗</span><strong>Сәйкестіру</strong><p>Өсімдік — ауру</p></button>
+        <button class="game-card" data-game="order"><span>📋</span><strong>Реттеу</strong><p>Қадамдарды ретке келтір</p></button>
+        <button class="game-card" data-game="find"><span>🔍</span><strong>Тапқыш</strong><p>Дұрыс өсімдікті тап</p></button>
+      </div>
+      <div class="game-area" id="gameArea">
+        <p class="game-area__hint">Ойынды таңдаңыз 👆</p>
+      </div>
+      <div class="page-next"><a href="anyqtama.html" class="btn btn--primary">Келесі: Анықтамалық →</a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер</p></div></footer>
+  <script src="nav.js"></script><script src="questions.js"></script><script src="game.js"></script><script src="oiyn.js"></script><script src="script.js"></script>
+</body>
+</html>

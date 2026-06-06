@@ -1,9 +1,14 @@
 const QUESTS = [
-  { id: 'lekciya', label: 'Лекция', href: 'lekciya.html', xp: 100, icon: '📚', color: 'green' },
-  { id: 'teoriya', label: 'Теория', href: 'teoriya.html', xp: 120, icon: '📖', color: 'blue' },
-  { id: 'testy', label: 'Тест', href: 'testy.html', xp: 150, icon: '✅', color: 'orange' },
-  { id: 'video', label: 'Бейне', href: 'video.html', xp: 100, icon: '🎬', color: 'pink' },
-  { id: 'refleksiya', label: 'Рефлексия', href: 'refleksiya.html', xp: 130, icon: '💭', color: 'purple' }
+  { id: 'daris', label: 'Дәріс', href: 'daris.html', xp: 50, icon: '📚', color: 'green' },
+  { id: 'tirek', label: 'Тірек жазба', href: 'tirek.html', xp: 40, icon: '📝', color: 'blue' },
+  { id: 'syzba', label: 'Сызба', href: 'syzba.html', xp: 40, icon: '🗺️', color: 'purple' },
+  { id: 'suraqtar', label: 'Сұрақтар', href: 'suraqtar.html', xp: 60, icon: '❓', color: 'orange' },
+  { id: 'test', label: 'Тест', href: 'test.html', xp: 80, icon: '✅', color: 'pink' },
+  { id: 'praktika', label: 'Практика', href: 'praktika.html', xp: 70, icon: '🔬', color: 'green' },
+  { id: 'zhagday', label: 'Жағдай', href: 'zhagday.html', xp: 50, icon: '💡', color: 'blue' },
+  { id: 'kvest', label: 'Квест', href: 'kvest.html', xp: 30, icon: '🗺️', color: 'purple' },
+  { id: 'oiyn', label: 'Ойындар', href: 'oiyn.html', xp: 60, icon: '🎮', color: 'orange' },
+  { id: 'anyqtama', label: 'Анықтамалық', href: 'anyqtama.html', xp: 40, icon: '📖', color: 'pink' }
 ];
 
 const LEVELS = [
@@ -17,28 +22,48 @@ const LEVELS = [
 const TUTOR_TIPS = {
   'index.html': [
     'Сәлем! Мен Ұлбосын — сенің AI көмекшіңмін! 🌿',
-    'Оқуды ойын сияқты өткіземіз: әр қадамда XP жинайсың!',
-    'Төмендегі квест картасынан баста — «Лекция» ашық тұр!'
+    '11 бөлімнен тұратын оқу сапарын бастайық!',
+    'Төмендегі карталардан «Дәріс» бөлімінен баста!'
   ],
-  'lekciya.html': [
-    'Лекция — сапардың бірінші қадамы! 7 қадамды оқып шық.',
-    'Соңында «Келесі: Теория» батырмасын бас — +100 XP аласың!'
+  'daris.html': [
+    'Дәріс — сапардың бірінші қадамы! 7 қадамды оқып шық.',
+    'Соңында «Келесі: Тірек жазба» батырмасын бас — XP аласың!'
   ],
-  'teoriya.html': [
-    'Теориялық материалдарды оқып, біліміңді бекіт!',
-    'Дайын болған соң тестке өт — сонда жұлдыз жинайсың ⭐'
+  'tirek.html': [
+    'Тірек жазба — негізгі ұғымдарды қысқаша қайтала!',
+    'Дайын болған соң ақпараттық сызбаға өт 🗺️'
   ],
-  'testy.html': [
-    'Тест — шеберлігіңді тексеру уақыты! 🎯',
-    'Көп дұрыс жауап = көбірек XP! «Тексеру» батырмасын ұмытпа.'
+  'syzba.html': [
+    'Сызба паразиттерге әсер ету механизмін көрсетеді.',
+    'Көргеннен кейін 10 сұраққа жауап бер!'
   ],
-  'video.html': [
-    'Бейнелер көру оңайырақ! Визуалды түрде үйрен.',
-    'Көргеннен кейін рефлексияға өт — сапар аяқталады!'
+  'suraqtar.html': [
+    '10 сұрақ — білімді бекіту уақыты! 🎯',
+    '«Тексеру» батырмасын ұмытпа — дұрыс жауап = XP!'
   ],
-  'refleksiya.html': [
-    'Соңғы қадам — өз ойыңды жазы! 💭',
-    '3 сұраққа жауап беріп сақта — сен нағыз ботаник боласың!'
+  'test.html': [
+    'Тест — 15 сұрақ, толық білімді тексеру!',
+    '60% жоғары болса — сәтті өттің деп есептейміз ⭐'
+  ],
+  'praktika.html': [
+    '6 практикалық тапсырма — теорияны іске асыр!',
+    'Соңғы тапсырма — рефлексия: өз ойыңды жазы 💭'
+  ],
+  'zhagday.html': [
+    'Жағдайлық тапсырмалар — нақты өмірдегі шешімдер!',
+    'Әр жағдайға өз шешіміңді жазып, квестке өт!'
+  ],
+  'kvest.html': [
+    'Квест картасы — барлық бөлімдерді көріп, XP жина!',
+    'Ашық бөлімдерді ретімен аяқта 🗺️'
+  ],
+  'oiyn.html': [
+    '6 ойын — білімді ойынмен бекіт!',
+    'Жады, викторина, сәйкестіру — таңдап ойна 🎮'
+  ],
+  'anyqtama.html': [
+    'Анықтамалық — соңғы қадам!',
+    'Негізгі ұғымдарды оқып, басты бетке орал 🌱'
   ]
 };
 
@@ -159,8 +184,9 @@ function injectTutor() {
   `;
   document.body.appendChild(tutor);
 
-  const toggle = tutor.querySelector('.tutor__toggle');
-  toggle.addEventListener('click', () => tutor.classList.toggle('open'));
+  tutor.querySelector('.tutor__toggle').addEventListener('click', () => {
+    tutor.classList.toggle('open');
+  });
 
   showTutorTips();
 }
@@ -194,8 +220,8 @@ function renderQuestMap() {
     const status = done ? 'done' : unlocked ? 'active' : 'locked';
 
     return `
-      <a href="${unlocked ? q.href : '#'}" 
-         class="quest-node quest-node--${status} quest-node--c-${q.color}" 
+      <a href="${unlocked ? q.href : '#'}"
+         class="quest-node quest-node--${status} quest-node--c-${q.color}"
          ${!unlocked ? 'onclick="return false"' : ''}>
         <span class="quest-node__icon">${done ? '✓' : unlocked ? q.icon : '🔒'}</span>
         <span class="quest-node__label">${q.label}</span>
@@ -209,17 +235,19 @@ function renderQuestMap() {
 function bindQuestCompletion() {
   const page = getPage();
   const questByPage = {
-    'lekciya.html': 'lekciya',
-    'teoriya.html': 'teoriya',
-    'video.html': 'video'
+    'daris.html': 'daris',
+    'tirek.html': 'tirek',
+    'syzba.html': 'syzba',
+    'zhagday.html': 'zhagday',
+    'kvest.html': 'kvest',
+    'oiyn.html': 'oiyn',
+    'anyqtama.html': 'anyqtama'
   };
 
   document.querySelectorAll('.page-next a').forEach(link => {
     link.addEventListener('click', () => {
       const q = questByPage[page];
-      if (q) {
-        completeQuest(q);
-      }
+      if (q) completeQuest(q);
     });
   });
 }

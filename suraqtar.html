@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сұрақтар — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Сұрақтар</h1>
+        <p>10 ашық сұрақ — толық жауап жазыңыз</p>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container container--narrow">
+
+        <div class="suraqtar-name-card">
+          <label for="suraqtarStudentName">Атыңыз</label>
+          <input
+            type="text"
+            id="suraqtarStudentName"
+            class="reflection-input"
+            placeholder="Мысалы: Айгүл Нұрланова"
+            autocomplete="name"
+          >
+          <p class="suraqtar-name-card__hint">Алдымен атыңызды енгізіңіз, содан кейін сұрақтарға жауап беріңіз</p>
+        </div>
+
+        <div id="suraqtarQuestions"></div>
+
+        <button class="btn btn--primary btn--large" id="submitSuraqtar">Сақтау</button>
+        <p class="reflection-saved" id="suraqtarResult"></p>
+
+        <div class="page-next">
+          <a href="test.html" class="btn btn--primary">Келесі: Тест →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="nav.js"></script>
+  <script src="questions.js"></script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

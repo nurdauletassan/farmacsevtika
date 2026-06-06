@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практикалық бөлім — Дәрілік өсімдіктер</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Дәрілік өсімдіктер</a>
+      <nav class="nav"></nav>
+      <button class="burger" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><h1>Практикалық бөлім</h1><p>6 әртүрлі практикалық тапсырма</p></div></section>
+    <section class="page-content"><div class="container container--narrow">
+
+      <div class="content-card practice-card">
+        <h3>Тапсырма 1: Айыр шайын дайындау</h3>
+        <p>Айыр шайын дайындау қадамдарын дұрыс ретпен орналастырыңыз (жазбаша).</p>
+        <textarea class="practice-input" placeholder="1. ... 2. ... 3. ..."></textarea>
+      </div>
+
+      <div class="content-card practice-card">
+        <h3>Тапсырма 2: Өсімдік — ауру сәйкестіру</h3>
+        <p>Айыр → ? , Қара мүйіз → ? , Қыран құйрық → ? жазыңыз.</p>
+        <textarea class="practice-input" placeholder="Айыр — ..."></textarea>
+      </div>
+
+      <div class="content-card practice-card">
+        <h3>Тапсырма 3: Дозалау есебі</h3>
+        <p>Айыр шайы: 1 ас қасық / 200 мл су, күніне 2 рет, 5 күн. Барлық мөлшерді жазып шығыңыз.</p>
+        <textarea class="practice-input" placeholder="Есептеу..."></textarea>
+      </div>
+
+      <div class="content-card practice-card">
+        <h3>Тапсырма 4: Қара мүйіз тұндырмасы</h3>
+        <p>Қара мүйіз тұндырмасын дайындау әдісін қадамдық жазыңыз.</p>
+        <textarea class="practice-input" placeholder="Қадамдар..."></textarea>
+      </div>
+
+      <div class="content-card practice-card">
+        <h3>Тапсырма 5: Қауіпсіздік тізімі</h3>
+        <p>Дәрілік өсімдіктерді қолданудың 5 қауіпсіздік ережесін жазыңыз.</p>
+        <textarea class="practice-input" placeholder="1. ... 2. ..."></textarea>
+      </div>
+
+      <div class="content-card practice-card practice-card--reflection">
+        <h3>Тапсырма 6: Рефлексия</h3>
+        <p class="reflection-info">Атыңызды енгізіп, 3 сұраққа жауап беріңіз.</p>
+        <div class="reflection-name-card">
+          <label for="studentName">Атыңыз</label>
+          <input type="text" id="studentName" class="reflection-input" placeholder="Мысалы: Айгүл">
+        </div>
+        <div class="reflection-q reflection-q--green reflection-form">
+          <h4>Не білдім?</h4>
+          <p class="reflection-q__hint">Бүгінгі сабақтан алған жаңа білімім</p>
+          <textarea id="reflection1"></textarea>
+        </div>
+        <div class="reflection-q reflection-q--blue reflection-form">
+          <h4>Не қызықты болды?</h4>
+          <p class="reflection-q__hint">Маған ерекше әсер еткен ақпарат</p>
+          <textarea id="reflection2"></textarea>
+        </div>
+        <div class="reflection-q reflection-q--purple reflection-form">
+          <h4>Болашақта қалай қолданамын?</h4>
+          <p class="reflection-q__hint">Оқуымда, тәжірибеде, мамандығымда</p>
+          <textarea id="reflection3"></textarea>
+        </div>
+        <button class="btn btn--primary" id="saveReflection">Сақтау</button>
+        <p class="reflection-saved" id="reflectionSaved"></p>
+      </div>
+
+      <div class="page-next"><a href="zhagday.html" class="btn btn--primary">Келесі: Жағдайлық тапсырмалар →</a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Дәрілік өсімдіктер</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="nav.js"></script><script src="game.js"></script><script src="script.js"></script>
+</body>
+</html>
