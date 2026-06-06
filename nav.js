@@ -1,29 +1,67 @@
+const SITE_SECTIONS = [
+  {
+    id: 'theory',
+    label: 'Теория',
+    icon: '📖',
+    items: [
+      { href: 'daris.html', label: 'Дәріс', icon: '📚', badge: '' },
+      { href: 'tirek.html', label: 'Тірек жазба', icon: '📝', badge: '' },
+      { href: 'syzba.html', label: 'Ақпараттық сызба', icon: '🗺️', badge: '' },
+      { href: 'anyqtama.html', label: 'Анықтамалық', icon: '📖', badge: '10' }
+    ]
+  },
+  {
+    id: 'practice',
+    label: 'Тәжірибе',
+    icon: '🔬',
+    items: [
+      { href: 'emf.html', label: 'МФ РК', labelLong: 'Мемлекеттік Фармакопея', icon: '📋', badge: '2' },
+      { href: 'praktika.html', label: 'Тәжірибелік жұмыс', icon: '🔬', badge: '5' },
+      { href: 'zhagday.html', label: 'Жағдай (кейс)', icon: '💡', badge: '10' },
+      { href: 'kvest.html', label: 'Квест', icon: '🔍', badge: '5' },
+      { href: 'oiyn.html', label: 'Ойындар', icon: '🎮', badge: '6' }
+    ]
+  },
+  {
+    id: 'assessment',
+    label: 'Бағалау',
+    icon: '✅',
+    items: [
+      { href: 'suraqtar.html', label: 'Өзін-өзі тексеру', labelLong: 'Өзін-өзі тексеру сұрақтары', icon: '❓', badge: '10' },
+      { href: 'test.html', label: 'Тест', icon: '✅', badge: '15' },
+      { href: 'refleksiya.html', label: 'Рефлексия', icon: '💭', badge: '3' }
+    ]
+  }
+];
+
 const NAV_ITEMS = [
   { href: 'index.html', label: 'Басты бет' },
-  { href: 'daris.html', label: 'Дәріс' },
-  { href: 'tirek.html', label: 'Тірек жазба' },
-  { href: 'syzba.html', label: 'Ақпараттық сызба' },
-  { href: 'suraqtar.html', label: 'Сұрақтар' },
-  { href: 'test.html', label: 'Тест' },
-  { href: 'praktika.html', label: 'Практика' },
-  { href: 'refleksiya.html', label: 'Рефлексия' },
-  { href: 'zhagday.html', label: 'Жағдай' },
-  { href: 'kvest.html', label: 'Квест' },
-  { href: 'oiyn.html', label: 'Ойындар' },
-  { href: 'anyqtama.html', label: 'Анықтамалық' }
+  ...SITE_SECTIONS.flatMap(s => s.items.map(i => ({
+    href: i.href,
+    label: i.labelLong || i.label
+  })))
 ];
 
 const PAGE_FLOW = [
-  'index.html', 'daris.html', 'tirek.html', 'syzba.html', 'suraqtar.html',
-  'test.html', 'praktika.html', 'refleksiya.html', 'zhagday.html', 'kvest.html', 'oiyn.html', 'anyqtama.html'
+  'index.html',
+  ...SITE_SECTIONS.flatMap(s => s.items.map(i => i.href))
 ];
 
 function injectNav() {
   const nav = document.querySelector('.nav');
   if (!nav) return;
-  nav.innerHTML = NAV_ITEMS.map(item =>
-    `<a href="${item.href}" class="nav__link">${item.label}</a>`
-  ).join('');
+
+  let html = '<a href="index.html" class="nav__link">Басты бет</a>';
+
+  SITE_SECTIONS.forEach(section => {
+    html += `<div class="nav__group"><span class="nav__group-label">${section.icon} ${section.label}</span>`;
+    section.items.forEach(item => {
+      html += `<a href="${item.href}" class="nav__link nav__link--${section.id}">${item.labelLong || item.label}</a>`;
+    });
+    html += '</div>';
+  });
+
+  nav.innerHTML = html;
 }
 
 function getNextPage(current) {

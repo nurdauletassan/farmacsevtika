@@ -1,24 +1,11 @@
-const ROUTE_SECTIONS = [
-  { label: 'Дәріс', href: 'daris.html', icon: '📚', color: 'green' },
-  { label: 'Тірек жазба', href: 'tirek.html', icon: '📝', color: 'blue' },
-  { label: 'Ақпараттық сызба', href: 'syzba.html', icon: '🗺️', color: 'purple' },
-  { label: 'Сұрақтар', href: 'suraqtar.html', icon: '❓', color: 'orange' },
-  { label: 'Тест', href: 'test.html', icon: '✅', color: 'pink' },
-  { label: 'Практика', href: 'praktika.html', icon: '🔬', color: 'green' },
-  { label: 'Рефлексия', href: 'refleksiya.html', icon: '💭', color: 'purple' },
-  { label: 'Жағдай', href: 'zhagday.html', icon: '💡', color: 'blue' },
-  { label: 'Ойындар', href: 'oiyn.html', icon: '🎮', color: 'orange' },
-  { label: 'Анықтамалық', href: 'anyqtama.html', icon: '📖', color: 'pink' }
-];
-
 const TUTOR_TIPS = {
   'index.html': [
     'Сәлем! Мен Шипобот — сенің AI көмекшіңмін! 🌿',
-    'Жасыл дәріханаға қош келдіңіз! 12 бөлімнен оқу сапарын бастайық!',
-    'Төмендегі карталардан «Дәріс» бөлімінен баста!'
+    'Жасыл дәріхана 3 бөлімнен тұрады: Теория, Тәжірибе, Бағалау!',
+    '«Теория» бөлімінен — Дәріспен баста!'
   ],
   'daris.html': [
-    'Дәріс — сапардың бірінші қадамы! 7 қадамды оқып шық.',
+    'Дәріс — Теория бөлімінің бірінші қадамы!',
     'Соңында «Келесі: Тірек жазба» батырмасын бас!'
   ],
   'tirek.html': [
@@ -27,39 +14,43 @@ const TUTOR_TIPS = {
   ],
   'syzba.html': [
     'Сызба паразиттерге әсер ету механизмін көрсетеді.',
-    'Көргеннен кейін 10 сұраққа жауап бер!'
+    'Көргеннен кейін Анықтамалыққа өт!'
   ],
-  'suraqtar.html': [
-    '10 сұрақ — білімді бекіту уақыты! 🎯',
-    'Атыңызды енгізіп, жауаптарды сақта!'
+  'anyqtama.html': [
+    'Анықтамалық — Теория бөлімінің соңы!',
+    'Келесі: Тәжірибе бөлімі — ЭМФ 📋'
   ],
-  'test.html': [
-    'Тест — 15 сұрақ, толық білімді тексеру!',
-    '60% жоғары болса — сәтті өттің деп есептейміз ⭐'
+  'emf.html': [
+    'Мемлекеттік Фармакопея — 1 және 2-томдар!',
+    'Мұқабаны басып, толық PDF-ті аш 📋'
   ],
   'praktika.html': [
-    '5 практикалық тапсырма — теорияны іске асыр!',
-    'Дайын болған соң «Рефлексия» бөліміне өт 💭'
-  ],
-  'refleksiya.html': [
-    'Рефлексия — оқу процесін бағалау уақыты!',
-    '3 сұраққа жауап жазып, «Сақтау» батырмасын бас 📝'
+    'Нұсқаулық карта — 5 тәжірибелік тапсырма!',
+    'Макроскопия, микроскопия, сәйкестіру және дайындау 🔬'
   ],
   'zhagday.html': [
     '10 жағдайлық тапсырма — нақты өмірдегі шешімдер!',
     'Әр тапсырмада 3 сұраққа жауап жаз!'
   ],
   'kvest.html': [
-    'Оқу маршруты — барлық бөлімдерді көріп, ретімен өт!',
-    'Кез келген бөлімнен бастауға болады 🗺️'
+    'Фармакогноз-детектив — 5 миссия!',
+    'Профессор Айман Ахметоваға көмектес, анықтамалықты толтыр 🔍'
   ],
   'oiyn.html': [
-    '6 ойын — білімді ойынмен бекіт!',
-    'Жады, викторина, сәйкестіру — таңдап ойна 🎮'
+    '6 ойын — антигельминтикалық шикізаттар бойынша!',
+    'Жады, викторина, сәйкестіру, тапқыш — таңдап ойна 🎮'
   ],
-  'anyqtama.html': [
-    'Анықтамалық — соңғы қадам!',
-    'Негізгі ұғымдарды оқып, Жасыл дәріханаға орал 💊'
+  'suraqtar.html': [
+    'Өзін-өзі тексеру — 10 ашық сұрақ! 🎯',
+    'Атыңызды енгізіп, жауаптарды сақта!'
+  ],
+  'test.html': [
+    'Тест — 15 сұрақ, толық білімді тексеру!',
+    '60% жоғары болса — сәтті өттің деп есептейміз ⭐'
+  ],
+  'refleksiya.html': [
+    'Рефлексия — оқу процесін бағалау уақыты!',
+    '3 сұраққа жауап жазып, «Сақтау» батырмасын бас 📝'
   ]
 };
 
@@ -108,13 +99,22 @@ function showTutorTips() {
 
 function renderRouteMap() {
   const map = document.getElementById('questMap');
-  if (!map) return;
+  if (!map || typeof SITE_SECTIONS === 'undefined') return;
 
-  map.innerHTML = ROUTE_SECTIONS.map(s => `
-    <a href="${s.href}" class="quest-node quest-node--active quest-node--c-${s.color}">
-      <span class="quest-node__icon">${s.icon}</span>
-      <span class="quest-node__label">${s.label}</span>
-    </a>
+  const colors = { theory: 'green', practice: 'blue', assessment: 'purple' };
+
+  map.innerHTML = SITE_SECTIONS.map(section => `
+    <div class="quest-group">
+      <h3 class="quest-group__title">${section.icon} ${section.label}</h3>
+      <div class="quest-group__items">
+        ${section.items.map(item => `
+          <a href="${item.href}" class="quest-node quest-node--active quest-node--c-${colors[section.id] || 'green'}">
+            <span class="quest-node__icon">${item.icon}</span>
+            <span class="quest-node__label">${item.labelLong || item.label}</span>
+          </a>
+        `).join('')}
+      </div>
+    </div>
   `).join('');
 }
 

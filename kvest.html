@@ -16,14 +16,133 @@
     </div>
   </header>
   <main>
-    <section class="page-hero"><div class="container"><h1>🗺️ Оқу маршруты</h1><p>Барлық бөлімдерге жылдам өту</p></div></section>
-    <section class="quest-section"><div class="container">
-      <p class="quest-section__sub">Кез келген бөлімді таңдаңыз</p>
-      <div class="quest-map" id="questMap"></div>
-    </div></section>
-    <section class="page-content"><div class="container">
-      <div class="page-next"><a href="oiyn.html" class="btn btn--primary">Келесі: Ойындар →</a></div>
-    </div></section>
+    <section class="page-hero">
+      <div class="container">
+        <h1>🔍 Квест</h1>
+        <p>Фармакогноз-детектив: Паразиттерге қарсы операция</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container container--narrow">
+
+        <div class="content-card quest-intro">
+          <h3>🕵️ Сюжет</h3>
+          <p>
+            Сіз — студент-фармакогноз. Танымал дәрігер <strong>профессор Айман Ахметова</strong> сізді көмекке шақырды.
+            Оның зертханасына қарапайым халыққа арналған «Антигельминтикалық анықтамалықты» дайындау тапсырылды.
+            Бірақ деректердің бір бөлігі шифрланған. Сізге <strong>5 миссияны</strong> орындап, анықтамалықты толтыру керек.
+            Әр миссияда бір шикізат туралы мәлімет жинайсыз.
+          </p>
+        </div>
+
+        <!-- Миссия 1 -->
+        <div class="content-card quest-mission" id="mission1">
+          <div class="quest-mission__badge">Миссия 1</div>
+          <h3>Экспресс-талдау: қандай шикізат?</h3>
+          <p class="quest-mission__story">
+            <strong>Оқиға:</strong> Зертхана үстелінде екі үлгі бар. Біреуі — таспа құртқа қарсы ең күшті, бірақ бауырға улы.
+            Екіншісі — уытсыз, балалар мен жүктілерге болады. Профессор: «Бірінші үлгінің сыртқы белгілерін жазып, оның атын жаз».
+          </p>
+          <div class="quest-mission__clue">
+            <strong>Үлгі №1 сипаты:</strong> Тамырсабақ, қоңыр-қара, цилиндр пішінді, ұзындығы 10–20 см. Иісі жағымсыз. Дәмі тәтті-ащы.
+          </div>
+          <ol class="quest-mission__tasks">
+            <li>Бұл қандай шикізат?</li>
+            <li>Оның негізгі белсенді заты қандай?</li>
+            <li>Қандай диагнозда қолданылады?</li>
+            <li>Қандай үш қарсы көрсетілімін ата?</li>
+          </ol>
+          <textarea class="practice-input" placeholder="Миссия 1 жауаптарыңыз..."></textarea>
+        </div>
+
+        <!-- Миссия 2 -->
+        <div class="content-card quest-mission" id="mission2">
+          <div class="quest-mission__badge">Миссия 2</div>
+          <h3>Микроскопиялық сызба</h3>
+          <p class="quest-mission__story">
+            <strong>Оқиға:</strong> Профессор сізге микроскопта анар қабығын көрсетті. «Мынаны сызып беріңізші, қандай құрылымдар көрінеді?»
+          </p>
+          <ol class="quest-mission__tasks">
+            <li>Анар қабығының микроскопиясында қандай екі диагностикалық белгі көрінеді?</li>
+            <li>Анар қабығының антигельминтикалық әсері қандай екі химиялық топқа байланысты?</li>
+            <li>Анар қабығының дәмі неге тұтқыр?</li>
+          </ol>
+          <p class="quest-mission__hint">Мәтінмен сипаттаңыз немесе құрылымды сипаттамалық түрде жазыңыз.</p>
+          <textarea class="practice-input" placeholder="Миссия 2 жауаптарыңыз..."></textarea>
+        </div>
+
+        <!-- Миссия 3 -->
+        <div class="content-card quest-mission" id="mission3">
+          <div class="quest-mission__badge">Миссия 3</div>
+          <h3>Жанама әсерді шешу</h3>
+          <p class="quest-mission__story">
+            <strong>Оқиға:</strong> Ауруханадан хабарлама келді: «7 жастағы бала аскаридозға қарсы цина жусаны гүлшоғырын қабылдағаннан кейін:
+            «Бәрін сары түсті көріп тұрмын» деп шағымданды».
+          </p>
+          <ol class="quest-mission__tasks">
+            <li>Бұл құбылыс қалай аталады?</li>
+            <li>Қандай зат тудырады?</li>
+            <li>Бұл қауіпті ме? Не істеу керек?</li>
+            <li>Цина жусаны гүлшоғырының дұрыс дозасын қалай анықтайды?</li>
+          </ol>
+          <textarea class="practice-input" placeholder="Миссия 3 жауаптарыңыз..."></textarea>
+        </div>
+
+        <!-- Миссия 4 -->
+        <div class="content-card quest-mission" id="mission4">
+          <div class="quest-mission__badge">Миссия 4</div>
+          <h3>Уытты өсімдіктерді салыстыру</h3>
+          <p class="quest-mission__story">
+            <strong>Оқиға:</strong> Профессор сізден екі улы шикізатты салыстыруды сұрайды: пижма гүлшоғыры және ащы жусан шөбі.
+          </p>
+          <ol class="quest-mission__tasks">
+            <li>Пижма гүлшоғырының негізгі улы заты қандай?</li>
+            <li>Ащы жусан шөбінің негізгі улы заты қандай?</li>
+            <li>Пижма гүлшоғырының улы заты қандай әсер етеді? (белгілері)</li>
+            <li>Ащы жусан шөбінің улы заты қандай әсер етеді? (белгілері)</li>
+            <li>Пижма гүлшоғырын кімдерге қолдануға болмайды? (кемінде 3 топ)</li>
+            <li>Ащы жусан шөбін кімдерге қолдануға болмайды? (кемінде 3 топ)</li>
+            <li>Пижма гүлшоғыры қандай паразиттерге әсер етеді?</li>
+            <li>Ащы жусан шөбі қандай паразиттерге әсер етеді?</li>
+          </ol>
+          <textarea class="practice-input" placeholder="Миссия 4 жауаптарыңыз..."></textarea>
+        </div>
+
+        <!-- Миссия 5 -->
+        <div class="content-card quest-mission" id="mission5">
+          <div class="quest-mission__badge">Миссия 5</div>
+          <h3>Қауіпсіз анықтамалықты толтыру</h3>
+          <p class="quest-mission__story">
+            <strong>Оқиға:</strong> Профессор «анықтамалықтың соңғы бетіне қауіпсіз шикізаттарды жазып бер» дейді.
+          </p>
+          <p class="quest-mission__clue">
+            <strong>Шикізаттар тізімі:</strong> асқабақ дәні, еркек қырыққұлағы, сарымсақ пиязы, пижма, тыңғылық шөбі, анар қабығы.
+          </p>
+          <p class="quest-mission__tasks-intro">Екі қауіпсіз (уытты емес) шикізатты таңдап, әрқайсысы үшін жазыңыз:</p>
+          <ul class="quest-mission__tasks">
+            <li>Латынша атауы</li>
+            <li>Негізгі белсенді заты</li>
+            <li>Қандай паразиттерге әсері</li>
+            <li>Қандай дәрілік формада қолданылады</li>
+          </ul>
+          <textarea class="practice-input" placeholder="Миссия 5 — екі қауіпсіз шикізат туралы толық жауап..."></textarea>
+        </div>
+
+        <div class="content-card quest-finale">
+          <h3>🎉 Құттықтаймыз!</h3>
+          <p>Сіз фармакогноз-детектив миссиясын сәтті аяқтадыңыз. Енді сіз қауіпті және қауіпсіз антигельминтикалық шикізаттарды ажырата аласыз.</p>
+          <p class="quest-finale__note">
+            <strong>Есіңізде болсын:</strong> асқабақ дәні мен тыңғылық — салыстырмалы түрде қауіпсіз,
+            ал папоротник, пижма, ащы жусан, цина жусаны — тек дәрігер бақылауымен!
+          </p>
+        </div>
+
+        <div class="page-next">
+          <a href="oiyn.html" class="btn btn--primary">Келесі: Ойындар →</a>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer"><div class="container"><p>© 2026 Фармакогнозия</p></div></footer>
   <script src="nav.js"></script><script src="game.js"></script><script src="script.js"></script>

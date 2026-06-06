@@ -37,28 +37,21 @@ function initActiveNav() {
 
 function renderStructureGrid() {
   const grid = document.getElementById('structureGrid');
-  if (!grid) return;
+  if (!grid || typeof SITE_SECTIONS === 'undefined') return;
 
-  const items = [
-    { href: 'daris.html', label: 'Дәріс', icon: '📚', badge: '' },
-    { href: 'tirek.html', label: 'Тірек жазба', icon: '📝', badge: '' },
-    { href: 'syzba.html', label: 'Ақпараттық сызба', icon: '🗺️', badge: '' },
-    { href: 'suraqtar.html', label: 'Сұрақтар', icon: '❓', badge: '10' },
-    { href: 'test.html', label: 'Тест', icon: '✅', badge: '15' },
-    { href: 'praktika.html', label: 'Практика', icon: '🔬', badge: '5' },
-    { href: 'refleksiya.html', label: 'Рефлексия', icon: '💭', badge: '3' },
-    { href: 'zhagday.html', label: 'Жағдай', icon: '💡', badge: '10' },
-    { href: 'kvest.html', label: 'Квест', icon: '🗺️', badge: '' },
-    { href: 'oiyn.html', label: 'Ойындар', icon: '🎮', badge: '6' },
-    { href: 'anyqtama.html', label: 'Анықтамалық', icon: '📖', badge: '' }
-  ];
-
-  grid.innerHTML = items.map((item, i) => `
-    <a href="${item.href}" class="structure-card structure-card--${i % 6}">
-      <span class="structure-card__icon">${item.icon}</span>
-      <strong>${item.label}</strong>
-      ${item.badge ? `<span class="structure-card__badge">${item.badge}</span>` : ''}
-    </a>
+  grid.innerHTML = SITE_SECTIONS.map(section => `
+    <div class="structure-block structure-block--${section.id}">
+      <h3 class="structure-block__title">${section.icon} ${section.label}</h3>
+      <div class="structure-grid structure-grid--nested">
+        ${section.items.map((item, i) => `
+          <a href="${item.href}" class="structure-card structure-card--${i % 6}">
+            <span class="structure-card__icon">${item.icon}</span>
+            <strong>${item.labelLong || item.label}</strong>
+            ${item.badge ? `<span class="structure-card__badge">${item.badge}</span>` : ''}
+          </a>
+        `).join('')}
+      </div>
+    </div>
   `).join('');
 }
 
