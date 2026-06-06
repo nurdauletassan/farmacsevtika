@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Құрттарға және паразиттерге қарсы дәрілік өсімдіктер</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
@@ -29,62 +27,50 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero--game">
       <div class="container hero__inner">
-        <p class="hero__label">Оқу курсы</p>
-        <h1 class="hero__title">
-          Құрттарға және паразиттерге қарсы әсері бар дәрілік өсімдіктер мен шикізаттар
-        </h1>
-      </div>
-    </section>
-
-    <section class="welcome">
-      <div class="container welcome__inner">
-        <h2 class="welcome__title">Қош келдіңіз!</h2>
-        <p class="welcome__text">
-          Бұл платформа құрттар мен паразиттерге қарсы қолданылатын дәрілік өсімдіктер 
-          туралы білім береді. Лекция, теория, бейне, тест және рефлексия арқылы 
-          тақырыпты толық меңгеріңіз.
-        </p>
-        <a href="lekciya.html" class="btn btn--primary">Оқуды бастау</a>
-      </div>
-    </section>
-
-    <section class="dashboard">
-      <div class="container">
-        <h2 class="dashboard__title">Оқу материалдары</h2>
-        <div class="dashboard__grid">
-          <a href="lekciya.html" class="dash-card">
-            <span class="dash-card__num">7</span>
-            <span class="dash-card__label">Лекция қадамы</span>
+        <div class="hero__game-content">
+          <p class="hero__label">🎮 Оқу ойыны</p>
+          <h1 class="hero__title">
+            Құрттарға және паразиттерге қарсы дәрілік өсімдіктер
+          </h1>
+          <p class="hero__subtitle">
+            AI көмекші Ұлбосын сені сапар бойы жетектеп отырады. 
+            Әр қадамда XP жинап, деңгейіңді арттыр!
+          </p>
+          <a href="lekciya.html" class="btn btn--primary btn--game quest-start">
+            🚀 Квестті бастау
           </a>
-          <a href="teoriya.html" class="dash-card">
-            <span class="dash-card__num">8</span>
-            <span class="dash-card__label">Теория</span>
-          </a>
-          <a href="video.html" class="dash-card">
-            <span class="dash-card__num">6</span>
-            <span class="dash-card__label">Бейне</span>
-          </a>
-          <a href="testy.html" class="dash-card">
-            <span class="dash-card__num">4</span>
-            <span class="dash-card__label">Тест</span>
-          </a>
-          <a href="refleksiya.html" class="dash-card">
-            <span class="dash-card__num">3</span>
-            <span class="dash-card__label">Рефлексия</span>
-          </a>
+        </div>
+        <div class="hero__tutor-card">
+          <div class="tutor-card">
+            <div class="tutor-card__avatar">🌿🤖</div>
+            <div class="tutor-card__bubble">
+              <strong>Ұлбосын:</strong>
+              <p>Сәлем! Мен сенің жеке оқу көмекшіңмін. Дәрілік өсімдіктерді ойын сияқты үйренейік!</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="quest-section">
+      <div class="container">
+        <h2 class="quest-section__title">🗺️ Оқу картасы</h2>
+        <p class="quest-section__sub">Қадамдарды ретімен өтіп, барлық квесттерді аяқта</p>
+        <div class="quest-map" id="questMap"></div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Дәрілік өсімдіктер — Оқу курсы</p>
+      <p>© 2026 Дәрілік өсімдіктер — Оқу ойыны</p>
     </div>
   </footer>
 
+  <script src="game.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
