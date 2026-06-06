@@ -1,0 +1,24 @@
+{
+  "headers": [
+    {
+      "source": "/Gosudarstvennaya-farmakopeya-Respubliki-Kazahstan-tom-I.pdf",
+      "has": [{ "type": "query", "key": "download" }],
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"MF-RK-tom-1.pdf\""
+        }
+      ]
+    },
+    {
+      "source": "/Gosudarstvennaya-farmakopeya-Respubliki-Kazahstan-tom-II.pdf",
+      "has": [{ "type": "query", "key": "download" }],
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"MF-RK-tom-2.pdf\""
+        }
+      ]
+    }
+  ]
+}
