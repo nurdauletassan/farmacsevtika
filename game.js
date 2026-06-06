@@ -1,6 +1,6 @@
 const TUTOR_TIPS = {
   'index.html': [
-    'Сәлем! Мен Шипобот — сенің AI көмекшіңмін! 🌿',
+    'Сәлем! Мен Шипабот — сенің AI көмекшіңмін! 🌿',
     'Жасыл дәріхана 3 бөлімнен тұрады: Теория, Тәжірибе, Бағалау!',
     '«Теория» бөлімінен — Дәріспен баста!'
   ],
@@ -65,12 +65,12 @@ function injectTutor() {
   tutor.className = 'tutor open';
   tutor.id = 'tutor';
   tutor.innerHTML = `
-    <button class="tutor__toggle" aria-label="AI көмекші Шипобот">🤖</button>
+    <button class="tutor__toggle" aria-label="AI көмекші Шипабот">🤖</button>
     <div class="tutor__panel">
       <div class="tutor__header">
         <span class="tutor__avatar">🤖</span>
         <div>
-          <strong>Шипобот</strong>
+          <strong>Шипабот</strong>
           <span>AI оқу көмекшісі</span>
         </div>
       </div>
