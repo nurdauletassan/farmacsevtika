@@ -2197,16 +2197,32 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
 /* Desktop */
 @media (min-width: 769px) {
   .container {
-    padding: 0 20px;
+    max-width: 1080px;
+    padding: 0 24px;
+  }
+
+  .container--narrow {
+    max-width: 820px;
+  }
+
+  .header {
+    height: auto;
+    overflow: visible;
   }
 
   .header__inner {
-    height: 64px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 64px;
+    padding: 12px 0 10px;
+    gap: 10px 16px;
+    align-items: center;
   }
 
   .logo {
     font-size: 1.05rem;
     gap: 10px;
+    flex-shrink: 0;
   }
 
   .burger {
@@ -2216,26 +2232,38 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
   .nav {
     position: static;
     display: flex;
+    flex: 1 1 100%;
     flex-direction: row;
-    gap: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 6px;
     padding: 0;
     border-bottom: none;
     box-shadow: none;
     max-height: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 62vw;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    max-width: 100%;
+    overflow: visible;
   }
 
-  .nav::-webkit-scrollbar {
-    display: none;
+  .nav__group {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin-top: 0;
+  }
+
+  .nav__group-label {
+    padding: 5px 8px 5px 2px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .nav__link {
     font-size: 0.78rem;
-    padding: 7px 10px;
+    padding: 6px 10px;
     min-height: auto;
     white-space: nowrap;
     flex-shrink: 0;
@@ -2259,17 +2287,35 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
   .greenhouse__shelf--right { right: 24px; }
 
   .hero--game .hero__inner {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
-    text-align: left;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero__game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__subtitle {
+    max-width: 520px;
   }
 
   .hero__tutor-card {
     order: 0;
+    justify-content: center;
   }
 
   .hero__game-content .btn {
     width: auto;
+  }
+
+  .tutor-card {
+    max-width: 340px;
+    width: 100%;
   }
 
   .welcome__card {
@@ -2290,7 +2336,7 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
 
   .lecture-step {
     padding: 28px;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 120px;
   }
 
   .page-next .btn,
@@ -2306,6 +2352,16 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
   .quest-section {
     padding: 48px 0 56px;
     margin: 0 20px 24px;
+  }
+
+  .quest-mission {
+    scroll-margin-top: 120px;
+  }
+
+  .quest-group__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .quest-map {
@@ -3060,23 +3116,42 @@ section.lecture-step:nth-of-type(7) .lecture-step__number { background: linear-g
     align-items: start;
   }
 
+  .structure-block {
+    padding: 22px 18px;
+    height: 100%;
+  }
+
+  .structure-grid--nested {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
   .structure-card {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 24px 16px;
-    min-height: 130px;
+    padding: 20px 12px;
+    min-height: 118px;
     text-align: center;
   }
 
   .structure-card strong {
     flex: none;
-    font-size: 0.88rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
   }
 
   .structure-card__icon {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .emf-covers {
+    gap: 28px;
+  }
+
+  .emf-cover-card__frame {
+    max-width: 320px;
   }
 
   .plant-map {
